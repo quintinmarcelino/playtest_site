@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :games
 root 'games#index'
 get '/users' => 'users#index'
+#destroy '/users/sign_out' => ''
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
