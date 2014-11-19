@@ -1,24 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :users
   resources :games
 root 'games#index'
-
-#User Routes
-devise_scope :user do
-  get '/users' => 'users#index'
-end
-
-devise_scope :user do
-  get "/users/sign_out" => "devise/sessions#destroy"
-end
-
-devise_scope :user do
-  get "users/sign_in" => "devise/sessions#new"
-end
-
-devise_scope :user do
-  get "users/sign_up" => "devise/registrations#new"
-end
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
