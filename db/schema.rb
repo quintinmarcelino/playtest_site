@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141107015016) do
+ActiveRecord::Schema.define(version: 20141121013930) do
 
   create_table "games", force: true do |t|
     t.text     "title"
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 20141107015016) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "username"
+    t.string   "about_me"
+    t.string   "location"
+    t.string   "name"
+    t.datetime "birthday"
+    t.string   "favorite_game"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
