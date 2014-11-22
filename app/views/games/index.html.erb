@@ -24,4 +24,7 @@
 
 <br>
 
-<%= link_to 'New Game', new_game_path %>
+<% if user_signed_in? %>
+ <%= link_to 'New Game', new_game_path %>
+<% end %>
+
