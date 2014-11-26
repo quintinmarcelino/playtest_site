@@ -25,6 +25,7 @@ class GamesController < ApplicationController
   # POST /games.json
   def create
     @game = Game.new(game_params)
+    @game.user_id = current_user.id
 
     respond_to do |format|
       if @game.save
