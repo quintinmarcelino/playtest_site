@@ -10,5 +10,8 @@
   <%= @game.description %>
 </p>
 
+<p>
+	<strong>Creator:</strong>
+	<%= @game.user_id %>
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>
